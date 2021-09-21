@@ -18,4 +18,4 @@ def roman_to_int(roman_string):
                     number += element[1] - (last * 2)
 
                 last = element[1]
-    return num
+    return number
