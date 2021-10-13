@@ -17,7 +17,7 @@ class Student():
             if i in self.__dict__ and type(i) is str:
                 new_dict[i] = self.__dict__.get(i)
         return new_dict
-    
+
     def reload_from_json(self, json):
         """Reload a JSON file"""
         for key in json:
