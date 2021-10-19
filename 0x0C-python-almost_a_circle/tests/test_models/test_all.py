@@ -2571,7 +2571,5 @@ class TestBaseClass(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Square(3, 0, -1)
 
-
-
 if __name__ == '__main__':
     unittest.main()

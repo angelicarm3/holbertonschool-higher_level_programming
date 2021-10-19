@@ -67,3 +67,7 @@ class Base:
             return jlist
         else:
             return jlist
+
+    def reset_nb_instances():
+        """Resets number of instances"""
+        Base.__nb_objects = 0
