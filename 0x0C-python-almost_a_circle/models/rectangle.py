@@ -8,6 +8,7 @@ class Rectangle (Base):
     """Defines a rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """"""
         self.width = width
         self.height = height
         self.x = x
@@ -15,13 +16,13 @@ class Rectangle (Base):
         super().__init__(id)
 
     @property
-    """Width getter"""
     def width(self):
+        """Width getter"""
         return self.__width
 
     @width.setter
-    """Width setter"""
     def width(self, value):
+        """Width setter"""
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -29,13 +30,13 @@ class Rectangle (Base):
         self.__width = value
 
     @property
-    """Height getter"""
     def height(self):
+        """Height getter"""
         return self.__height
 
     @height.setter
-    """Height setter"""
     def height(self, value):
+        """Height setter"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -43,25 +44,25 @@ class Rectangle (Base):
         self.__height = value
 
     @property
-    """x getter"""
     def x(self, value):
+        """x getter"""
         return self.__x
 
     @x.setter
-    """x setter"""
     def x(self, value):
+        """x getter"""
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
-    """y getter"""
     def y(self, value):
+        """y getter"""
         return self.__y
 
     @y.setter
-    """y setter"""
     def y(self, value):
+        """x getter"""
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
