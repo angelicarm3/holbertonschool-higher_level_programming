@@ -91,7 +91,7 @@ class Rectangle (Base):
     def update(self, *args, **kwargs):
         """Updates class info"""
         if args and len(args) != 0:
-            a = 0
+            ar = 0
             for arg in args:
                 if ar == 0:
                     if arg is None:
