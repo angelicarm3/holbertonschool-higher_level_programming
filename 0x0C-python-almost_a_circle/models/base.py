@@ -27,7 +27,7 @@ class Base:
     def save_to_file(cls, list_objs):
         """Writes an object to a text file"""
         list = []
-        filename = cls.__name__ + ".json"
+        filename = str(cls.__name__)+".json"
 
         if list_objs is not None:
             for i in range(len(list_objs)):
