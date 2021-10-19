@@ -1,10 +1,12 @@
 #!/usr/bin/python3
+
 """Class Rectangle"""
 from models.base import Base
 
 
 class Rectangle (Base):
     """Defines a rectangle"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -65,11 +67,11 @@ class Rectangle (Base):
         self.__y = value
 
     def area(self):
-        """Returns retangle's area"""
+        """Returns rectangle's area"""
         return self.width * self.height
 
     def display(self):
-        """Prints rectagle with #"""
+        """Prints rectacgle with #"""
         if self.width == 0 or self.height == 0:
             print("")
             return
@@ -78,7 +80,7 @@ class Rectangle (Base):
             print("#" * self.__width)
 
     def __str__(self):
-        """Prints rectagle's info"""
+        """Prints rectacgle's info"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.__x, self.__y,
                                                        self.__width,
