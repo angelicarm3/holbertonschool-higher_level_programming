@@ -44,26 +44,30 @@ class Rectangle (Base):
         self.__height = value
 
     @property
-    def x(self, value):
+    def x(self):
         """x getter"""
         return self.__x
 
     @x.setter
     def x(self, value):
         """x setter"""
-        if value < 0:
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        elif value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
-    def y(self, value):
+    def y(self):
         """y getter"""
         return self.__y
 
     @y.setter
     def y(self, value):
         """y setter"""
-        if value < 0:
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        elif value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
@@ -76,6 +80,7 @@ class Rectangle (Base):
         if self.width == 0 or self.height == 0:
             print("")
             return
+
         for i in range(self.__height):
             print(" " * self.__x, end="")
             print("#" * self.__width)
@@ -122,3 +127,9 @@ class Rectangle (Base):
                     self.x = val
                 elif key == "y":
                     self.y = val
+
+    def to_dictionary(self):
+        """Returns dictionary representation of Rectangule"""
+        return {"id": self.id, "width": self.width,
+                "height": self.height, "x": self.x,
+                "y": self.y}
