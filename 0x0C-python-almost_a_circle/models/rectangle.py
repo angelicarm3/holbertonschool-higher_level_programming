@@ -77,13 +77,9 @@ class Rectangle (Base):
 
     def display(self):
         """Prints rectacgle with #"""
-        if self.width == 0 or self.height == 0:
-            print("")
-            return
-
+        print("\n" * self.__y, end="")
         for i in range(self.__height):
-            print(" " * self.__x, end="")
-            print("#" * self.__width)
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """Prints rectacgle's info"""
