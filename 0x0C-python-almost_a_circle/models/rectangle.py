@@ -8,7 +8,7 @@ class Rectangle (Base):
     """Defines a rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """"""
+        """Constructor for Rectangle class"""
         self.width = width
         self.height = height
         self.x = x
@@ -25,7 +25,7 @@ class Rectangle (Base):
         """Width setter"""
         if type(value) != int:
             raise TypeError("width must be an integer")
-        if value <= 0:
+        elif value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
 
@@ -39,7 +39,7 @@ class Rectangle (Base):
         """Height setter"""
         if type(value) != int:
             raise TypeError("height must be an integer")
-        if value <= 0:
+        elif value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
@@ -50,7 +50,7 @@ class Rectangle (Base):
 
     @x.setter
     def x(self, value):
-        """x getter"""
+        """x setter"""
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
@@ -62,7 +62,7 @@ class Rectangle (Base):
 
     @y.setter
     def y(self, value):
-        """x getter"""
+        """y setter"""
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
