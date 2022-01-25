@@ -6,6 +6,7 @@ class Rectangle:
     """Class Rectangle"""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -51,9 +52,9 @@ class Rectangle:
         rect = ""
         for i in range(self.height):
             if self.height > (i + 1):
-                rect += "#" * self.width + "\n"
+                rect += str(self.print_symbol) * self.width + "\n"
             else:
-                rect += "#" * self.width
+                rect += str(self.print_symbol) * self.width
         return rect
 
     def __repr__(self):
