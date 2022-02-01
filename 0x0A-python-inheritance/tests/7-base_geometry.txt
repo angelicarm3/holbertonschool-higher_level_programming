@@ -34,3 +34,16 @@ creates an instance of the class BaseGeometry
     >>> bg.integer_validator("side", str)
     Traceback (most recent call last):
     TypeError: side must be an integer
+
+    integer_validator method tuple:
+    >>> bg.integer_validator("Foo", (1, 2))
+    Traceback (most recent call last):
+    TypeError: Foo must be an integer
+
+    >>> bg.integer_validator("Foo", {1, 2})
+    Traceback (most recent call last):
+    TypeError: Foo must be an integer
+
+    >>> bg.integer_validator("foo", None)
+    Traceback (most recent call last):
+    TypeError: foo must be an integer
