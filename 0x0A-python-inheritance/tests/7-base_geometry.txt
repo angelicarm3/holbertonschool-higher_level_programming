@@ -75,3 +75,7 @@ creates an instance of the class BaseGeometry
     >>> bg.integer_validator("integer")
     Traceback (most recent call last):
     TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> bg.integer_validator("complex", complex(1, 1))
+    Traceback (most recent call last):
+    TypeError: complex must be an integer
