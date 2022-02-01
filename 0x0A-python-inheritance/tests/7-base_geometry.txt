@@ -47,3 +47,23 @@ creates an instance of the class BaseGeometry
     >>> bg.integer_validator("foo", None)
     Traceback (most recent call last):
     TypeError: foo must be an integer
+
+    >>> bg.__class__.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> bg.integer_validator("Bar", "bar")
+    Traceback (most recent call last):
+    TypeError: Bar must be an integer
+
+    >>> bg.integer_validator("Bar", True)
+    Traceback (most recent call last):
+    TypeError: Bar must be an integer
+
+    >>> bg.integer_validator("a", [1])
+    Traceback (most recent call last):
+    TypeError: a must be an integer
