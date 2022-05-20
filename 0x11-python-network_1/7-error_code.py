@@ -8,8 +8,9 @@ if __name__ == "__main__":
     import sys
 
     url = sys.argv[1]
-
-    if requests.get(url).status_code >= 400:
-        print("Error code: {}".format(response.status_code))
+    resp = requests.get(url)
+    
+    if resp.status_code >= 400:
+        print("Error code: {}".format(resp.status_code))
     else:
-        print(request.get(url).text)
+        print(resp.text)
